@@ -12,7 +12,7 @@ You don't need any additional packages. Just integrate the js and css files into
 
 This project is written by Genereux-akotenou and is open to anyone with great ideas.
 
-| [Généreux Akotenou](https://github.com/Genereux-akotenou)                                                              |
+[Généreux Akotenou](https://github.com/Genereux-akotenou)
 
 ## License
 
