@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     hljs.initHighlightingOnLoad();
+    
+    const codeBlock = document.getElementsByClassName('gCode-cell');
+    const copyButton = document.getElementsByClassName('gCode-copy-button');
+    const copySuccess = document.getElementsByClassName('gCode-copy-success');
+    console.log(codeBlock);
+    console.log(copyButton);
+    console.log(copySuccess);
 
-    const codeBlock = document.getElementById('gCode-cell');
-    const copyButton = document.getElementById('gCode-copy-button');
-    const copySuccess = document.getElementById('gCode-copy-success');
-
-    const copyTextHandler = () => {
+    const copyTextHandler = (i_current) => {
+        //i_current=1;
+        console.log(i_current);
         // first version - document.execCommand('copy')
         // var tempEditor = document.createElement('textarea');
         // document.body.appendChild(tempEditor);
@@ -20,15 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // }, 2700);
 
         // second version - clipboard API
-        navigator.clipboard.writeText(codeBlock.innerText).then(() => {
-            copySuccess.classList.add('show-message');
+        navigator.clipboard.writeText(codeBlock[i_current].innerText).then(() => {
+            copySuccess[i_current].classList.add('show-message');
             setTimeout(() => {
-                copySuccess.classList.remove('show-message');
+                copySuccess[i_current].classList.remove('show-message');
             }, 2700);
         }, () => {
             console.log('Error writing to the clipboard')
         })
     };
 
-    copyButton.addEventListener('click', copyTextHandler)
+    
+   
+     console.log(copyButton.length);
+for (let i = 0; i <=copyButton.length-1; ++i) {
+    console.log(i);
+    copyButton[i].addEventListener('click', function(){copyTextHandler(i)}, false);
+}
+    
 });

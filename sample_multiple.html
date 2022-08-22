@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gCode-highlighter</title>
+    <!-- import -->
+    <link href="style.css" rel="stylesheet"/>
+    <script src="main.js"></script>
+   
+    
+    <link href="highlight/dracula.css" rel="stylesheet" />
+    <script src="highlight/highlight.min.js"></script>
+</head>
+<body class="gCode-sample">
+    
+    <div style="display: flex; flex-direction: column;">
+    <div class="gc gCode-container" >
+        <p class="gc gCode-language">PHP</p>
+        <div class="gc gCode-wrapper">
+            <pre><code class="gc gCode-cell">
+&lt;?php  
+    // Recursive function for fibonacci series.
+    function Fibonacci($number) {
+        // if and else if to generate first two numbers
+        if ($number == 0)
+            return 0;    
+        else if ($number == 1)
+            return 1;    
+            
+        // Recursive Call to get the upcoming numbers
+        else
+            return (Fibonacci($number-1) + Fibonacci($number-2));
+    }
+        
+    // Driver Code
+    $number = 10;
+    for ($counter = 0; $counter < $number; $counter++) {  
+        echo Fibonacci($counter),' ';
+    }
+?&gt;
+        </code></pre>
+            <button class="gc gCode-copy-button">Copier</button>
+        </div>
+        <span class="gc gCode-copy-success">Code copié</span>
+    </div>
+    <br><br>
+    <div class="gc gCode-container" >
+        <p class="gc gCode-language">Python</p>
+        <div class="gc gCode-wrapper">
+            <pre><code class="gc gCode-cell">
+                print("Hello World")
+        </code></pre>
+            <button class="gc gCode-copy-button">Copier</button>
+        </div>
+        <span class="gc gCode-copy-success">Code copié</span>
+    </div>
+    <br><br>
+    <div class="gc gCode-container" >
+        <p class="gc gCode-language">PHP</p>
+        <div class="gc gCode-wrapper">
+            <pre><code class="gc gCode-cell">
+&lt;?php  
+    // Recursive function for fibonacci series.
+    function Fibonacci($number) {
+        // if and else if to generate first two numbers
+        if ($number == 0)
+            return 0;    
+        else if ($number == 1)
+            return 1;    
+            
+        // Recursive Call to get the upcoming numbers
+        else
+            return (Fibonacci($number-1) + Fibonacci($number-2));
+    }
+        
+    // Driver Code
+    $number = 10;
+    for ($counter = 0; $counter < $number; $counter++) {  
+        echo Fibonacci($counter),' ';
+    }
+?&gt;
+        </code></pre>
+            <button class="gc gCode-copy-button">Copier</button>
+        </div>
+        <span class="gc gCode-copy-success">Code copié</span>
+    </div>
+</div>
+    
+</body>
+</html>
