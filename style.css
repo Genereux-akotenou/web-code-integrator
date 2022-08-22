@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .gCode-sample{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #871e3d;
 }
 .gCode-container{
@@ -34,7 +35,8 @@
     border-radius: 0 0 5px 5px;
     text-align: left;
 }
-#gCode-copy-button{
+
+.gCode-copy-button{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -48,13 +50,14 @@
     transition: all .2s ease-in;
     opacity: 0;
 }
-#gCode-copy-button:hover {
+.gCode-copy-button:hover {
     background-color: #1f428790;
 }
-.gCode-wrapper:hover #gCode-copy-button {
+.gCode-wrapper:hover .gCode-copy-button {
     opacity: 1;
 }
-#gCode-copy-success{
+
+.gCode-copy-success{
     position: absolute;
     left: 8px;
     top: 7px;
@@ -66,7 +69,7 @@
     display: none;
 }
 
-#gCode-copy-success.show-message{
+.gCode-copy-success.show-message{
     display: inline;
 }
 pre {
